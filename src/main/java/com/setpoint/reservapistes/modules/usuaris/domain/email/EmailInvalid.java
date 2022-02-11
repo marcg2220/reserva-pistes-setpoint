@@ -16,6 +16,6 @@ public class EmailInvalid extends DomainFormatException {
 
     @Override
     public String uiMessage() {
-        return "El correu electrònic no té un format correcte";
+        return "El correu electrònic no té un format correcte.";
     }
 }

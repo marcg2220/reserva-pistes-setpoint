@@ -1,6 +1,7 @@
 package com.setpoint.reservapistes.modules.usuaris.domain;
 
 import com.setpoint.reservapistes.config.core.bus.domain.event.AggregateRoot;
+import com.setpoint.reservapistes.modules.usuaris.domain.documentidentitat.DocumentIdentitat;
 import com.setpoint.reservapistes.modules.usuaris.domain.email.Email;
 
 public class Usuari extends AggregateRoot {
@@ -11,7 +12,7 @@ public class Usuari extends AggregateRoot {
     //Mutable - Required
     private String nom;
     private String cognoms;
-    //private DocumentIdentitat nif;
+    private DocumentIdentitat nif;
     private Email email;
     //private Nivell nivell;
 
