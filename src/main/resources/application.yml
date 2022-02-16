@@ -1,0 +1,57 @@
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: "5MB"
+      max-file-size: "5MB"
+      max-request-size: "6MB"
+  jackson:
+    property-naming-strategy: "SNAKE_CASE"
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+        order_by:
+          default_null_ordering: last
+        connection:
+          useUnicode: true
+          characterEncoding: UTF-8
+          charSet: UTF-8
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    hikari:
+    url: jdbc:postgresql://localhost:5432/setpoint
+    username: postgres
+    password: postgres
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    tagsSorter: alpha
+    operations-sorter: alpha
+  packages-to-scan:
+    - 'com.setpoint.reservapistes.modules.usuaris.infrastructure.api'
+
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+
+
+#info:
+#  app:
+#    name: @project.name@
+#    description: @project.description@
+#    version: @project.version@
+#    encoding: @project.build.sourceEncoding@
+#    java:
+#      version: @java.version@

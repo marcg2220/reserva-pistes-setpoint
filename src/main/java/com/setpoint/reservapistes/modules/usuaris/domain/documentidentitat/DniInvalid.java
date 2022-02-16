@@ -1,6 +1,6 @@
 package com.setpoint.reservapistes.modules.usuaris.domain.documentidentitat;
 
-import com.setpoint.reservapistes.config.core.exceptions.domain.DomainFormatException;
+import com.setpoint.reservapistes.modules.shared.core.exceptions.domain.DomainFormatException;
 
 public class DniInvalid extends DomainFormatException {
 
